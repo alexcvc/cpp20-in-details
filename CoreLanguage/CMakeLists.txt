@@ -41,7 +41,6 @@ list(APPEND SOURCE_FILES
    mainSIOF2.cpp
    mainSIOF3.cpp
    math.cpp
-   math.ixx
    math1.ixx
    math2.ixx
    mathImplementationUnit.cpp
@@ -76,7 +75,6 @@ list(APPEND SOURCE_FILES
    sumMain.cpp
    templateLambda.cpp
    templateLambdaVector.cpp
-   test.cpp
    threeWayComparison.cpp
    threeWayComparisonAtCompileTime.cpp
    threeWayComparisonForInt.cpp

@@ -1,13 +1,14 @@
 // lazyGenerator.cpp
 
 #include <iostream>
+#include <coroutine>
 
-generator<int> generatorForNumbers(int begin, int inc = 1) {
-  
+auto generatorForNumbers(int begin, int inc = 1) {
+    int i = begin;
     while (true) {
         co_yield i;
+        i += inc;
     }
-  
 }
 
 int main() {
