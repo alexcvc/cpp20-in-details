@@ -6,15 +6,24 @@
 #include <list>
 #include <string>
 #include <vector>
+#include <experimental/deque>
+#include <experimental/forward_list>
+#include <experimental/list>
+#include <experimental/map>
+#include <experimental/set>
+#include <experimental/string>
+#include <experimental/unordered_map>
+#include <experimental/unordered_set>
+#include <experimental/vector>
 
 template <typename Cont>                                        
 void eraseVal(Cont& cont, int val) {
-    std::erase(cont, val);
+    std::experimental::erase(cont, val);
 }
 
 template <typename Cont, typename Pred>                         
 void erasePredicate(Cont& cont, Pred pred) {
-    std::erase_if(cont, pred);
+    std::experimental::erase_if(cont, pred);
 }
 
 template <typename Cont>
@@ -38,9 +47,9 @@ int main() {
     
     std::string str{"A Sentence with an E."};
     std::cout << "str: " << str << '\n';
-    std::erase(str, 'e');                                        
+    std::experimental::erase(str, 'e');
     std::cout << "str: " << str << '\n';
-    std::erase_if( str, [](char c){ return std::isupper(c); });  
+    std::experimental::erase_if( str, [](char c){ return std::isupper(c); });
     std::cout << "str: " << str << '\n';
     
     std::cout << "\nstd::vector " << '\n';
